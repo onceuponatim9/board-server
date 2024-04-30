@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+* {
+    color: gray;
+}
+
+h1 {
+    color: #0aaa5c;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+form {
+    width: 460px;
+    margin: auto;
+}
+
+form > div {
+    margin: 10px 0;
+}
+
+form,
+form > div:not(:nth-child(3))
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#id-box {
+    border: solid 1px lightgray;
+    padding: 14px 10px;
+}
+
+#id-box input {
+    border: none;
+    width: 50%;
+    outline: none;
+}
+
+#id-box span {
+    float: right;
+    padding-right: 10px;
+}
+
+input[type="text"]:not(#id-box>input),
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select,
+#radio-container,
+form > div:nth-child(3)
+{
+    padding: 14px 10px;
+    border: solid 1px lightgray;
+    outline: none;
+}
+
+#id-box:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus
+{
+    border: solid 2px #0aaa5c;
+}
+
+#radio-container {
+    display: flex;
+}
+
+form > div > div:first-child,
+form > div > input:first-child
+{
+    border-radius: 5px 5px 0 0;
+}
+
+form > div > input:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+form > div:nth-child(3),
+input[type="submit"]
+{
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    color: white;
+    border: none;
+    background-color: #0aaa5c;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#male:checked ~ #label-male > span,
+#female:checked ~ #label-female > span,
+#non-foreigner:checked ~ #label-nf > span,
+#foreigner:checked ~ #label-f > span,
+#agree:checked ~ #label-agree > span
+{
+    color: #0aaa5c;
+}
+
+#radio-container {
+    padding: 5px;
+}
+
+#radio-container > div {
+    border: solid 1px lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+#radio-container > div:first-child {
+    margin-right: 5px;
+}
+
+#radio-container > div > div {
+    width: 50%;
+}
+
+#agree {
+    width: 5%;
+}
+
+#agreebox {
+	display: flex;
+	border: solid 1px lightgray;
+	border-radius: 5px;
+	flex-direction: row;
+    padding: 14px 10px;
+}
+
+#agreebox > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#agreebox span {
+    color: black;
+    font-weight: 900;
+}
+
+#agreebox span:not(:last-child) {
+	color: #0aaa5c;
+	padding-right: 5px;
+}
